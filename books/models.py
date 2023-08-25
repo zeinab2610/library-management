@@ -5,3 +5,6 @@ class Book(models.Model):
   author = models.CharField(max_length=255)
   publicationDate = models.DateField(null=True)
   category = models.CharField(max_length=255)
+
+  def __str__(self):
+     return f"{self.title}"
