@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html>
-<body>
+{% extends "master.html" %}
 
-<h1>Books</h1>
+{% block title %}
+ List of all books
+{% endblock %}
+
+
+{% block content %}
+  <h1>Books</h1>
   
-<ul>
-  {% for x in mybooks %}
-    <li>{{ x.title }} {{ x.author }} {{x.publicationDate}}{{x.category}}</li>
-  {% endfor %}
-</ul>
-
-</body>
-</html>
+  <ul>
+    {% for x in mybooks %}
+      <li><a href="details/{{ x.id }}">{{ x.title }} {{ x.author }}  {{ x.productionDate }}  {{ x.category }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

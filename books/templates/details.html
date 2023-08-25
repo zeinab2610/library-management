@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ mybook.Title }} 
+{% endblock %}
+
+
+{% block content %}
+<h1>{{ mybook.title }} {{ mybook.author }}</h1>
+  
+<p>Publication Date: {{ mybook.publicationDate }}</p>
+<p>Category:  {{ mybook.category }}</p>
+  
+  <p>Back to <a href="/books">books</a></p>
+  
+{% endblock %}
